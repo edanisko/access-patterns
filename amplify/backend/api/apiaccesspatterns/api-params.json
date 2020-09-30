@@ -1,0 +1,42 @@
+{
+    "paths": [
+        {
+            "name": "/entity",
+            "lambdaFunction": "entitylambda",
+            "privacy": {
+                "private": true,
+                "auth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH",
+                    "/DELETE"
+                ]
+            },
+            "policyResourceName": "/entity"
+        }
+    ],
+    "resourceName": "apiaccesspatterns",
+    "apiName": "apiaccesspatterns",
+    "functionArns": [
+        {
+            "lambdaFunction": "entitylambda"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 0,
+        "authRoleName": "amplify-accesspatterns-dev-142113-authRole",
+        "unAuthRoleName": "amplify-accesspatterns-dev-142113-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "entitylambda",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

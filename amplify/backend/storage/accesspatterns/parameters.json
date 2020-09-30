@@ -1,0 +1,7 @@
+{
+    "tableName": "accesspatterns",
+    "partitionKeyName": "pk",
+    "partitionKeyType": "S",
+    "sortKeyName": "sk",
+    "sortKeyType": "S"
+}
